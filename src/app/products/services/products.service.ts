@@ -9,18 +9,18 @@ export class ProductsService {
 
   constructor(private http:HttpClient) { }
   getAllProducts() {
-    return this.http.get(environment.baseApi +'products')
+    return this.http.get('https://fakestoreapi.com/products')
   }
 
   getAllCategories() {
-    return this.http.get(environment.baseApi +'products/categories')
+    return this.http.get('https://fakestoreapi.com/products/categories')
   }
   getProductsByCategory(keyword:string) {
-    return this.http.get(environment.baseApi +'products/category/'+keyword)
+    return this.http.get('https://fakestoreapi.com/products/category/'+keyword)
   }
 
   getProductById(id:any) {
-    return this.http.get(environment.baseApi +'products/'+id)
+    return this.http.get('https://fakestoreapi.com/products/'+id)
   }
   
 }
